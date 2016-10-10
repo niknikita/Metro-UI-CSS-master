@@ -52,6 +52,14 @@
         }
     </style>
     <script>
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                data: dataSet                
+            } );
+        } );
+
+
+
         $(function() {
             $('.sidebar').on('click', 'li', function() {
                 if (!$(this).hasClass('active')) {
@@ -114,17 +122,17 @@
     <div class="page-content">
 
         <div class="flex-grid no-responsive-future" style="height: 100%;">
-            <div class="row" style="height: 100%">
+            <div class="row cells3" style="height: 100%">
                 <div class="cell size-x200" id="cell-sidebar" style="background-color: #0072c6; height: 100%;">
                     <ul class="sidebar navy">
-                        <li class="active">
+                        <li>
                             <a href="DB2GIS.html">
                                 <span class="mif-database icon"></span>
                                 <span class="title">БД 2Гис</span>
                                 <span class="counter">0</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="Projects.html">
                                 <span class="mif-event-available icon"></span>
                                 <span class="title">Проекты</span>
@@ -157,29 +165,26 @@
                 <div class="cell auto-size padding20 bg-white" id="cell-content">
                     <div class="panel">
                         <div class="heading">
-                            <span class="icon mif-database"></span>
-                            <span class="title">БД 2Гис</span>
+                            <span class="icon mif-event-available"></span>
+                            <span class="title">Проекты</span>
                         </div>
                         <div class="content">
                             <div class="toolbar">
                                 <div class="toolbar-section">
                                     <button class="button">создать базу</button>
                                     <button class="button">Обновить базу по выбранному городу</button>
-                                    
+
                                 </div>
-                                
+
                             </div>
-                            <table class="dataTable text-small border hovered bordered full-size" data-role="datatable" data-auto-width="false">
+                            <table id="example" class="dataTable border hovered bordered full-size" data-role="datatable" data-auto-width="false">
                                 <thead>
                                     <tr>
                                         <th style="width:15px;"></th>
                                         <th style="width:10px;">№</th>
-                                        <th style="width:15px;">Город</th>
-                                        <th style="width:15px;">Количество фирм</th>
-                                        <th style="width:15px;">Количество фирм (без филиалов)</th>
-                                        <th style="width:15px;">Количество e-mail</th>
-                                        <th style="width:25px;">Дата обновления</th>
-                                        <th>Проекты</th>
+                                        <th style="width:15px;">Проект</th>
+                                        <th style="width:15px;">Количество БД</th>
+                                        <th> Описание проекта</th>                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -190,17 +195,9 @@
                                             <span class="check"></span>
                                         </td>
                                         <td>1</td>
-                                        <td>Челябинск</td>
-                                        <td>45075</td>
-                                        <td>31714</td>
-                                        <td>9798</td>
-                                        <td>01.09.2016</td>
-                                        <td> 
-                                            <a href="">Додо пицца</a>,
-                                            <a href="">Техноград</a>,
-                                            <a href="">КАИС</a>,
-                                            <a href="">ИНСИС</a>
-                                        </td>
+                                        <td>Инсис</td>
+                                        <td>4</td>
+                                        <td></td>                                        
                                     </tr>
                                     <tr>
                                         <td>
@@ -209,21 +206,32 @@
                                             <span class="check"></span>
                                         </td>
                                         <td>2</td>
-                                        <td>Екатеринбург</td>
-                                        <td>65643</td>
-                                        <td>42756</td>
-                                        <td>13538</td>
-                                        <td>01.09.2016</td>
-                                        <td> 
-                                            <a href="">Додо пицца</a>,
-                                            <a href="">КАИС</a>,
-                                            <a href="">ИНСИС</a>,
-                                            <a href="">УралСтальИнвест</a>
+                                        <td>интерсвязь</td>
+                                        <td>17</td>
+                                        <td></td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="input-control checkbox small-check no-margin">
+                                            <input type="checkbox">
+                                            <span class="check"></span>
                                         </td>
+                                        <td>3</td>
+                                        <td>УралстальИнвест</td>
+                                        <td>21</td>
+                                        <td></td>                                        
                                     </tr>
                                 </tbody>                                    
-                            </table>
+                            </table>                            
                         </div>
+                    </div>
+                </div>
+                <div class="cell size-x400 padding20 bg-cyan">
+                    <div data-text="additional text">
+                        <h4>Интерсвязь</h4>
+                        <h5>Количество БД</h5>
+                         <p class="text-default">4</p>
+                        
                     </div>
                 </div>
             </div>
