@@ -57,8 +57,7 @@
                 data: dataSet                
             } );
         } );
-
-
+       
 
         $(function() {
             $('.sidebar').on('click', 'li', function() {
@@ -150,7 +149,8 @@
                             <a href="#">
                                 <span class="mif-clipboard icon"></span>
                                 <span class="title">Задачи</span>
-                                <span class="counter">0</span>
+                                <span class="counter">0<span class="counter place-right">0</span></span>
+                                
                             </a>
                         </li>
                         <li>
@@ -226,12 +226,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="cell size-x400 padding20 bg-cyan">
-                    <div data-text="additional text">
+                <div class="cell size-x400 padding20 bg-grayLighter">
+                    <div data-text="headings secondary">
                         <h4>Интерсвязь</h4>
-                        <h5>Количество БД</h5>
-                         <p class="text-default">4</p>
-                        
+                        <h5>Количество БД <small class="text-default">13</small></h5>                        
+                    </div>
+                    <div data-text="headings secondary">
+                        <h4>Описание проекта</h4>
+                        <h5>Дата создания <small class="text-default">01.05.2016</small></h5>
+                        <h6><small class="text-default">ИТМ проект для обзвона физ лиц по Челябинской области. Обзваниваются стационарные телефоны</small></h6>                        
                     </div>
                 </div>
             </div>
