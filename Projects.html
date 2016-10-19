@@ -41,13 +41,16 @@
             min-height: 0;
             height: auto;
         }
-        
+       
         @media screen and (max-width: 800px) {
             #cell-sidebar {
                 flex-basis: 52px;
             }
             #cell-content {
                 flex-basis: calc(100% - 52px);
+            }
+            #cell3_{
+                flex-basis: 100%;
             }
         }
     </style>
@@ -226,7 +229,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cell size-x400 padding20 bg-grayLighter">
+                <div class="cell size-x300 padding20 bg-grayLighter" id="cell3_">
                     <div data-text="headings secondary">
                         <h4>Интерсвязь</h4>
                         <h5>Количество БД <small class="text-default">13</small></h5>                        
